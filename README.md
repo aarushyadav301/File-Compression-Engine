@@ -24,3 +24,24 @@ The compression process relies on a Huffman binary tree built from character fre
 ## Build
 
 ### Compile the compressor
+
+g++ -std=c++17 file_compress.cpp BitWriter.cpp -o compress
+
+### Compile the decompressor
+
+g++ -std=c++17 file_decompress.cpp BitWriter.cpp -o decompress
+
+
+## Usage
+
+### 1. Compress a file
+Run the `compress` executable with your input file and desired output filename.
+
+./compress <input_file> <output_file>
+Example: ./compress original.txt compressed.bin
+
+### 2. Decompress a file
+Run the `decompress` executable to restore the original file.
+
+./decompress <compressed_file> <restored_file>
+Example: ./decompress compressed.bin restored.txt
